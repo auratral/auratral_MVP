@@ -1,0 +1,148 @@
+/* Navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1.5rem 0;
+}
+
+.navbar.scrolled {
+    padding: 0.75rem 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--glass-border);
+    border-radius: 0;
+    /* Override generic glass curve for nav */
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--text-primary);
+}
+
+.navbar-search {
+    position: relative;
+    flex: 1;
+    max-width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border-radius: 100px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.navbar-compliance {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-teal);
+    background: rgba(45, 212, 191, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 100px;
+    border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Button utility classes to move to index.css later */
+.btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+}

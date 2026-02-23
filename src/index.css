@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+    /* Premium Dark Theme Variables */
+    --bg-base: #0f172a;
+    /* script slate-900 */
+    --bg-surface: rgba(30, 41, 59, 0.7);
+    /* translucent slate-800 */
+    --bg-surface-solid: #1e293b;
+    --text-primary: #f8fafc;
+    /* slate-50 */
+    --text-secondary: #94a3b8;
+    /* slate-400 */
+
+    --accent-teal: #2dd4bf;
+    --accent-purple: #a855f7;
+
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+    background: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 12px;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
